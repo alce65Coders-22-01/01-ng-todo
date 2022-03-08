@@ -1,9 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
-interface MenuItemsI {
-  path: string;
-  label: string;
-}
+import { Component, Input, OnInit } from '@angular/core';
+import { MenuItemsI } from 'src/app/interfaces';
 
 @Component({
   selector: 'isdi-menu',
@@ -11,13 +7,8 @@ interface MenuItemsI {
   styleUrls: ['./menu.component.scss'],
 })
 export class MenuComponent implements OnInit {
-  menuItems: Array<MenuItemsI>;
-  constructor() {
-    this.menuItems = [
-      { path: 'home', label: 'Inicio' },
-      { path: 'about', label: 'Acerca de' },
-    ];
-  }
+  @Input() menuItems!: Array<MenuItemsI>;
+  constructor() {}
 
   ngOnInit(): void {}
 }

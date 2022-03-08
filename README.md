@@ -25,3 +25,17 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+Angular se divide en módulos
+
+- app ---importa----> core
+- core
+
+Los módulos contienen componentes
+
+- app {isdi-root}
+- core {isdi-header, isdi-footer}
+
+Los módulo pueden exportar parte de suu componentes
+
+- core {isdi-header, isdi-footer}

@@ -1,0 +1,9 @@
+<h2>Greetings</h2>
+<input
+  type="text"
+  name=""
+  [placeholder]="placeHolderText"
+  [(ngModel)]="userName"
+/>
+<p>Hola {{ !userName ? "amigo" : userName }}</p>
+<button (click)="handleDelete()" type="button">Borrar</button>

@@ -1,0 +1,6 @@
+<p>Add tarea</p>
+<form [formGroup]="addForm" (ngSubmit)="handleSubmit()">
+  <input type="text" formControlName="title" placeholder="Título" />
+  <input type="text" formControlName="responsible" placeholder="Responsable" />
+  <button type="submit">Guardar</button>
+</form>

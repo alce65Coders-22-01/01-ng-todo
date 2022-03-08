@@ -1,0 +1,6 @@
+<li>
+  <input type="checkbox" name="" [(ngModel)]="task.isCompleted" />
+  <span>{{ task.title }}</span>
+  <span>{{ task.responsible }}</span>
+  <span (click)="handleDelete()">🗑️</span>
+</li>

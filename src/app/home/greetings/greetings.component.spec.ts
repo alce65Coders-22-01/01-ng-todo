@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
 
 import { GreetingsComponent } from './greetings.component';
 
@@ -8,9 +9,9 @@ describe('GreetingsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GreetingsComponent ]
-    })
-    .compileComponents();
+      declarations: [GreetingsComponent],
+      imports: [FormsModule],
+    }).compileComponents();
   });
 
   beforeEach(() => {

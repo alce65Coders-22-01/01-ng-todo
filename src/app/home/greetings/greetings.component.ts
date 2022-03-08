@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'isdi-greetings',
@@ -8,13 +9,17 @@ import { Component, OnInit } from '@angular/core';
 export class GreetingsComponent implements OnInit {
   placeHolderText: string;
   userName: string;
-  constructor() {
+  constructor(public ls: LoginService) {
     this.placeHolderText = 'Dime tu nombre';
     this.userName = 'Pepe';
   }
 
   handleDelete() {
     this.userName = '';
+  }
+
+  handleLogin() {
+    this.ls.login(this.userName);
   }
 
   ngOnInit(): void {}

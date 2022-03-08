@@ -7,9 +7,10 @@
       "isCompleted": false
     },
     {
-      "title": "Otra cosas",
+      "id": 2,
+      "title": "Update json-server",
       "responsible": "Ernesto",
-      "id": 2
+      "isCompleted": false
     }
   ]
 }

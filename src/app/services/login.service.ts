@@ -5,14 +5,16 @@ import { Subject } from 'rxjs';
   providedIn: 'root',
 })
 export class LoginService {
-  userLogin!: string;
-  userLogin$: Subject<string>;
+  // userLogin!: string;
+  private readonly userLoginSource: Subject<string>;
+  readonly userLogin$;
   constructor() {
-    this.userLogin$ = new Subject();
+    this.userLoginSource = new Subject();
+    this.userLogin$ = this.userLoginSource.asObservable();
   }
 
   login(user: string) {
-    this.userLogin = user;
-    this.userLogin$.next(this.userLogin);
+    //this.userLogin = user;
+    this.userLoginSource.next(user);
   }
 }

@@ -8,14 +8,14 @@ describe('TaskComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TaskComponent ]
-    })
-    .compileComponents();
+      declarations: [TaskComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(TaskComponent);
     component = fixture.componentInstance;
+    component.task = { title: '', responsible: '', isCompleted: false };
     fixture.detectChanges();
   });
 

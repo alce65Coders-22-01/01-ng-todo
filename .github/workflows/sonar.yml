@@ -14,7 +14,7 @@ jobs:
       - name: Install modules
         run: npm ci
       - name: Testing coverage
-        run: npm test --code-coverage
+        run: npm run test:prod
         env:
           JWT_SECRET: ${{ secrets.JWT_SECRET }}
       - name: SonarCloud Scan
